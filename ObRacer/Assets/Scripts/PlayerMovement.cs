@@ -15,15 +15,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
 
         if(Input.GetKey("d"))
         {
-            rb.AddForce(sidewaysForce*Time.deltaTime, 0, 0);
+            rb.AddForce(sidewaysForce*Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
