@@ -49,5 +49,12 @@ public class PlayerController : MonoBehaviour
         //currentPosition.x = Mathf.Clamp(currentPosition.x, -mapWidth, mapWidth);
 
         transform.position = currentPosition;
+
+        if (rb.position.y < -1.5f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
+
+
     }
 }
