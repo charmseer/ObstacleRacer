@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public PlayerMovement movement;
+    public PlayerController movement;
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
