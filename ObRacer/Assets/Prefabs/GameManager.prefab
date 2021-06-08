@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartDelay: 1
   completeLvlUI: {fileID: 0}
+  PauseMenuUI: {fileID: 0}
 --- !u!95 &8736038527278620802
 Animator:
   serializedVersion: 3
@@ -56,7 +57,7 @@ Animator:
   m_GameObject: {fileID: 8736038527278620801}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b3835e0e04ecb54aac12e4eb63163ce, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
