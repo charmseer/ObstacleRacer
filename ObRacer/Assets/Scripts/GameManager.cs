@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             gameHasEnded = true;
             Debug.Log("Game Over");
 
-            Invoke("Restart", restartDelay) ;
+            Invoke("Restart", restartDelay);
             
         }
 
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void FallOffPause()
     {
-        //Time.timeScale = 0f;
+        //Time.timeScale = 1f;
         FallOffPanel.SetActive(true);
 
     }
@@ -91,8 +91,9 @@ public class GameManager : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     public void QuitGame()

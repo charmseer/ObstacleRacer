@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     //[SerializeField] private float mapWidth = 25f;
     public Rigidbody rb;
-    public float forwardForce = 1000f;
+    public float forwardForce = 100f;
 
     
 
@@ -53,8 +54,11 @@ public class PlayerController : MonoBehaviour
 
         transform.position = currentPosition;
 
+        //if(Keyboard.current.spaceKey.wasPressedThisFrame)
+
         if (rb.position.y < -1.5f)
         {
+            //Time.timeScale = 0f;
             //Destroy(gameObject); // Doesn't work camera still follows so we get error messages.
             FindObjectOfType<GameManager>().FallOffPause();
             //FindObjectOfType<GameManager>().EndGame();
