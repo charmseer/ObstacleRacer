@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded=false;
 
-    public float restartDelay = 1f;
+    public float restartDelay = 1.5f;
+
     public GameObject completeLvlUI;
 
     //Pause Button Panel
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     //Esc Key Back button panel
     public GameObject EscMenuPanel;
+
+    //Fall Off Menu UI
+    public GameObject FallOffPanel;
 
     private void Update()
     {
@@ -30,11 +34,14 @@ public class GameManager : MonoBehaviour
     }
     public void EndGame()
     {
+
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
             Debug.Log("Game Over");
+
             Invoke("Restart", restartDelay) ;
+            
         }
 
     }
@@ -45,6 +52,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         //GameIsPaused = true;
     }
+
+    public void FallOffPause()
+    {
+        //Time.timeScale = 0f;
+        FallOffPanel.SetActive(true);
+
+    }
+
 
     public void Resume()
     {
@@ -74,9 +89,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Level Won!");
         completeLvlUI.SetActive(true);
     }
-    void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Time.timeScale = 1f;
     }
 
     public void QuitGame()

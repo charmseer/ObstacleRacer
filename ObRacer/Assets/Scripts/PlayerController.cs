@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private float mapWidth = 25f;
     public Rigidbody rb;
     public float forwardForce = 1000f;
+
+    
 
     private void Awake()
     {
@@ -52,7 +55,9 @@ public class PlayerController : MonoBehaviour
 
         if (rb.position.y < -1.5f)
         {
-            FindObjectOfType<GameManager>().EndGame();
+            //Destroy(gameObject); // Doesn't work camera still follows so we get error messages.
+            FindObjectOfType<GameManager>().FallOffPause();
+            //FindObjectOfType<GameManager>().EndGame();
         }
 
 

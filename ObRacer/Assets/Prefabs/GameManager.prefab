@@ -47,6 +47,7 @@ MonoBehaviour:
   restartDelay: 1
   completeLvlUI: {fileID: 0}
   PauseMenuUI: {fileID: 0}
+  EscMenuPanel: {fileID: 0}
 --- !u!95 &8736038527278620802
 Animator:
   serializedVersion: 3
