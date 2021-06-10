@@ -16,7 +16,11 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = player.position.z.ToString("0");
+        if(player.position.y >=0)
+        {
+            scoreText.text = player.position.z.ToString("0");
+        }
 
+        //scoreText.text = player.position.z.ToString("0"); // Code above stops score from updating if player falls off the edge
     }
 }
