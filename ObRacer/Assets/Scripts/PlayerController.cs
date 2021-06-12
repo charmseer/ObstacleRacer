@@ -38,7 +38,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
+        if (Keyboard.current.spaceKey.IsActuated())
+        {
+            rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
+        }
     }
     // Update is called once per frame
     void Update()
