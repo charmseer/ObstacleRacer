@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     public Transform player;
     public Text scoreText;
+    float playerPosition, offset = -4.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,11 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.position.y >=0)
+        playerPosition = player.position.z;
+        if(player.position.y >=0) // When position.y < 0 player falls off the edge and we need the score to stop.
         {
-            scoreText.text = player.position.z.ToString("0");
+            //scoreText.text = player.position.z.ToString("0");
+            scoreText.text = (playerPosition + offset).ToString("F1")+ "m";
         }
 
         //scoreText.text = player.position.z.ToString("0"); // Code above stops score from updating if player falls off the edge
