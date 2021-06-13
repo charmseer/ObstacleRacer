@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
     public PlayerController movement;
     public GameObject CollisionPanel;
+    public int theScore;
+    public Text scoreValue;
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
@@ -21,6 +24,11 @@ public class PlayerCollision : MonoBehaviour
     {
         CollisionPanel.SetActive(true);
     }
-    
 
+    private void OnTriggerEnter(Collider other)
+    {
+        theScore += 1;
+        
+        scoreValue.GetComponent<Text>().text = theScore.ToString() + "/5";
+    }
 }
