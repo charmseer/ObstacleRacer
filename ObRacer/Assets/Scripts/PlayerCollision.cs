@@ -27,8 +27,16 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        theScore += 1;
-        
-        scoreValue.GetComponent<Text>().text = theScore.ToString() + "/5";
+        if (other.gameObject.tag == "Token")
+        {
+            //Had to add the if statement here because the EndLevel Invisible Block isTrigger.
+            // So when the player collides with the endlevel Block the score goes up by 1.
+            // Cant have that now can we.
+            theScore += 1;
+
+            scoreValue.GetComponent<Text>().text = theScore.ToString() + "/6";
+
+        }
+
     }
 }

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4116959530961938188}
   - component: {fileID: 4100198615781952066}
   - component: {fileID: 4139888338958530207}
+  - component: {fileID: 1668757430}
   m_Layer: 0
   m_Name: BeveledStar
-  m_TagString: Untagged
+  m_TagString: Token
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4138908127669715366}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.11, y: 2.01, z: 45.1}
-  m_LocalScale: {x: 0.3, y: 0.1, z: 0.3}
+  m_LocalScale: {x: 0.3, y: 0.10000001, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,8 +116,21 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138908127669715366}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.0929294, y: 12.554127, z: 5.190592}
   m_Center: {x: -0.06059398, y: -1.0755204, z: -0.90553343}
+--- !u!114 &1668757430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138908127669715366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80445e891e5f0204c8f00071dfeb7a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectSound: {fileID: 0}
