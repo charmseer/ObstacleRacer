@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - EndLevelBlock
+  - Token
   layers:
   - Default
   - TransparentFX
