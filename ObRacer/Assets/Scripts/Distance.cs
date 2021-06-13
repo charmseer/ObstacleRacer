@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
+public class Distance : MonoBehaviour
 {
     public Transform player;
-    public Text scoreText;
+    public Text DistanceText;
     float playerPosition, offset = -4.0f;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
         if(player.position.y >=0) // When position.y < 0 player falls off the edge and we need the score to stop.
         {
             //scoreText.text = player.position.z.ToString("0");
-            scoreText.text = (playerPosition + offset).ToString("F1")+ "m";
+            DistanceText.text = (playerPosition + offset).ToString("F1")+ "m";
         }
 
         //scoreText.text = player.position.z.ToString("0"); // Code above stops score from updating if player falls off the edge
