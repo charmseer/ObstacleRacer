@@ -12,7 +12,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
-        if(collisionInfo.collider.tag == "Obstacle")
+        if(collisionInfo.collider.tag == ("Obstacle") )
         {
             movement.enabled = false;
             Invoke("CollisionPause", 1.5f);
