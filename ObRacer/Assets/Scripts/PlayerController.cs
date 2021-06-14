@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public float forwardForce = 100f;
 
-    public AudioSource Engine;
+    public AudioSource engineSound;
     
 
     private void Awake()
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.spaceKey.IsActuated())
         {
             rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
-            Engine.Play();
+            engineSound.Play();
         }
     }
     // Update is called once per frame
