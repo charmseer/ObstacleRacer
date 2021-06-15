@@ -34,7 +34,7 @@ public class PlayerCollision : MonoBehaviour
             // Cant have that now can we.
             theScore += 1;
 
-            scoreValue.GetComponent<Text>().text = theScore.ToString() + "/6";
+            scoreValue.GetComponent<Text>().text = theScore.ToString();
 
         }
 

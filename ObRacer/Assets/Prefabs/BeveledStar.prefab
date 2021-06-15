@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4100198615781952066}
   - component: {fileID: 4139888338958530207}
   - component: {fileID: 1668757430}
+  - component: {fileID: 4549828922716334878}
   m_Layer: 0
   m_Name: BeveledStar
   m_TagString: Token
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4138908127669715366}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.11, y: 2.01, z: 45.1}
-  m_LocalScale: {x: 0.3, y: 0.10000001, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,21 +94,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4138908127669715366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff967b7ed48f2441bcf509edf6b889a, type: 3}
+  m_Script: {fileID: 11500000, guid: b6845fb47a255bc42b63b5847a95e8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAnimated: 1
+  isAnimated: 0
   isRotating: 0
-  isFloating: 1
-  isScaling: 1
-  rotationAngle: {x: 0, y: 0, z: 10}
-  rotationSpeed: 5
-  floatSpeed: 0.01
-  floatRate: 0.5
-  startScale: {x: 0.3, y: 0.1, z: 0.3}
-  endScale: {x: 0.6, y: 0.2, z: 0.6}
-  scaleSpeed: 1
-  scaleRate: 1
+  isFloating: 0
+  isScaling: 0
+  rotationAngle: {x: 0, y: 0, z: 0}
+  rotationSpeed: 0
+  floatSpeed: 0
+  floatRate: 0
+  startScale: {x: 0, y: 0, z: 0}
+  endScale: {x: 0, y: 0, z: 0}
+  scaleSpeed: 0
+  scaleRate: 0
 --- !u!65 &4139888338958530207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,8 +120,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0929294, y: 12.554127, z: 5.190592}
-  m_Center: {x: -0.06059398, y: -1.0755204, z: -0.90553343}
+  m_Size: {x: 3.0929294, y: 1.4250141, z: 4.310848}
+  m_Center: {x: -0.060593963, y: -0.11007118, z: -0.46566188}
 --- !u!114 &1668757430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +135,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectSound: {fileID: 0}
+--- !u!114 &4549828922716334878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138908127669715366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6845fb47a255bc42b63b5847a95e8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAnimated: 1
+  isRotating: 1
+  isFloating: 1
+  isScaling: 0
+  rotationAngle: {x: 0, y: 0, z: 90}
+  rotationSpeed: 1
+  floatSpeed: 0.005
+  floatRate: 1
+  startScale: {x: 0.3, y: 0.1, z: 0.3}
+  endScale: {x: 0.6, y: 0.2, z: 0.6}
+  scaleSpeed: 1
+  scaleRate: 1
