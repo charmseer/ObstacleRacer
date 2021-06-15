@@ -9,7 +9,13 @@ public class PlayerCollision : MonoBehaviour
     public GameObject CollisionPanel;
     public int theScore;
     public Text scoreValue;
+    public Text scoreValueLvlEnd;
+    public Text bestScoreValue;
 
+    private void Start()
+    {
+        bestScoreValue.text = PlayerPrefs.GetInt("BestScore", 000).ToString();
+    }
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if(collisionInfo.collider.tag == ("Obstacle") )
@@ -34,7 +40,14 @@ public class PlayerCollision : MonoBehaviour
             // Cant have that now can we.
             theScore += 1;
 
-            scoreValue.GetComponent<Text>().text = theScore.ToString();
+            scoreValue.GetComponent<Text>().text = theScore.ToString() + " / ";
+            scoreValueLvlEnd.GetComponent<Text>().text = theScore.ToString()+ " / ";
+
+        }
+        if (theScore > PlayerPrefs.GetInt("BestScore", 0))
+        {
+            PlayerPrefs.SetInt("BestScore", theScore);
+            bestScoreValue.text = theScore.ToString() + " / ";
 
         }
 
