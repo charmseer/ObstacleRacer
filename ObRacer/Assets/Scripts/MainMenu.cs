@@ -10,6 +10,23 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("World1Level1");
+    }
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("World1Level2");
+    }
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("World1Level3");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Player has Quit the Game");

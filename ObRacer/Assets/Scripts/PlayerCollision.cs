@@ -34,6 +34,8 @@ public class PlayerCollision : MonoBehaviour
         //bestScoreValue.text = PlayerPrefs.GetInt("World1Level2", 000).ToString();
 
     }
+
+
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if(collisionInfo.collider.tag == ("Obstacle") )
@@ -62,31 +64,41 @@ public class PlayerCollision : MonoBehaviour
             scoreValueLvlEnd.GetComponent<Text>().text = theScore.ToString()+ " / ";
 
         }
-        if (SceneManager.GetActiveScene().name == "World1Level1")
-        {
-            if (theScore > PlayerPrefs.GetInt("World1Level1", 0))
-            {
-                PlayerPrefs.SetInt("World1Level1", theScore);
-                bestScoreValue.text = theScore.ToString() + " / ";
-            }
-        }
-        
-        if (SceneManager.GetActiveScene().name == "World1Level2")
-        {
-            if (theScore > PlayerPrefs.GetInt("World1Level2", 0))
-            {
-                PlayerPrefs.SetInt("World1Level2", theScore);
-                bestScoreValue.text = theScore.ToString() + " / ";
-            }
-        }
 
-        if (SceneManager.GetActiveScene().name == "World1Level3")
+        if (other.gameObject.tag == "EndLevelBlock")
         {
-            if (theScore > PlayerPrefs.GetInt("World1Level3", 0))
+            //Had to put the HighScore Updater inside this block because
+            //otherwise the Highscore updated even if the Player died
+            //before reaching the EndLevelBlock. Now the HighScore will be
+            //reset only after the Player Reaches the EndLevelBlock
+            Debug.Log(theScore);
+            if (SceneManager.GetActiveScene().name == "World1Level1")
             {
-                PlayerPrefs.SetInt("World1Level3", theScore);
-                bestScoreValue.text = theScore.ToString() + " / ";
+                if (theScore > PlayerPrefs.GetInt("World1Level1", 0))
+                {
+                    PlayerPrefs.SetInt("World1Level1", theScore);
+                    bestScoreValue.text = theScore.ToString() + " / ";
+                }
             }
+
+            if (SceneManager.GetActiveScene().name == "World1Level2")
+            {
+                if (theScore > PlayerPrefs.GetInt("World1Level2", 0))
+                {
+                    PlayerPrefs.SetInt("World1Level2", theScore);
+                    bestScoreValue.text = theScore.ToString() + " / ";
+                }
+            }
+
+            if (SceneManager.GetActiveScene().name == "World1Level3")
+            {
+                if (theScore > PlayerPrefs.GetInt("World1Level3", 0))
+                {
+                    PlayerPrefs.SetInt("World1Level3", theScore);
+                    bestScoreValue.text = theScore.ToString() + " / ";
+                }
+            }
+
         }
 
     }

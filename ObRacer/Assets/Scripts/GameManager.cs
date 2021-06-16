@@ -108,6 +108,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Player has chosen to quit the game");
         Application.Quit();
     }
+
+
 }
 
 
