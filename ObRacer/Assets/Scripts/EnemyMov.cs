@@ -14,6 +14,6 @@ public class EnemyMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        transform.position = startPos + 2* new Vector3(Mathf.Sin(Time.time), 0f, 0f);
+        transform.position = startPos + 3* new Vector3(Mathf.Sin(Time.time), 0f, 0f);
     }
 }
