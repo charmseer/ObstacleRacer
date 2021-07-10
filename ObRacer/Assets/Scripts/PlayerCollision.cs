@@ -12,6 +12,7 @@ public class PlayerCollision : MonoBehaviour
     public Text scoreValue; // On Screen Score Text, Updates live
     public Text scoreValueLvlEnd; // Score shown at the end of the Level
     public Text bestScoreValue; // High Score shown at the end of the level
+    public AudioSource crashSound;
     //public Text bestScoreValue2;
 
     private void Start()
@@ -41,6 +42,7 @@ public class PlayerCollision : MonoBehaviour
         if(collisionInfo.collider.tag == ("Obstacle") )
         {
             movement.enabled = false;
+            crashSound.Play();
             Invoke("CollisionPause", 1.5f);
             //FindObjectOfType<GameManager>().CollisionPause();
         }

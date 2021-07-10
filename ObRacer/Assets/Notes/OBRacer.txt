@@ -1,0 +1,15 @@
+Main Camera Cube Offset
+X Y Z - 0, 1.25, -4
+
+Main Camera Car offset
+XYZ : 2,3, -12
+
+
+Car Model
+by datpixman under the Royalty Free License
+https://www.cgtrader.com/items/1921490/download-page
+
+Crystal by Criterial Design under the Royalty Free License
+https://www.cgtrader.com/free-3d-models/plant/other/hand-painted-crystal
+
+Car Crash Sound from mixkit.co under Mixkit Sound Effects Free License 
