@@ -15,3 +15,18 @@ https://www.cgtrader.com/free-3d-models/plant/other/hand-painted-crystal
 Mask by Chiffa under the Royalty Free License
 
 Car Crash Sound from mixkit.co under Mixkit Sound Effects Free License 
+
+
+Title Font
+
+Score font - Roboto thin
+
+Menu and Button Font - Geo by Ben Weiner Google Fonts
+
+Background Panel Color - 25173F
+
+CTA Button Color - 6A6291
+
+Othe Button Color - 6A6291
+Pressed - 6A6291, A = 90
+Selected - 6A6291, A = 20
