@@ -30,3 +30,8 @@ CTA Button Color - 6A6291
 Othe Button Color - 6A6291
 Pressed - 6A6291, A = 90
 Selected - 6A6291, A = 20
+
+Pause/ Collision/ FallOff Panel
+Title - 60 Roboto Light
+
+World Details - Roboto thin, Font 30
